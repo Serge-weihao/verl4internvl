@@ -1,0 +1,3 @@
+Looking in indexes: https://pypi.org/simple, https://pypi.ngc.nvidia.com
+Requirement already satisfied: optree in /usr/local/lib/python3.10/dist-packages (0.17.0)
+Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.10/dist-packages (from optree) (4.12.2)
