@@ -1,15 +1,8 @@
-# verl documents
+# verl4internvl
+基于verl支持internvl文本-图文混合训练的repo，同时支持FSDP下序列并行等功能、MoE负载均衡监控以及GRPO、DAPO、GSPO
 
-## Build the docs
+## Training
 
-```bash
-# Install dependencies.
-pip install -r requirements-docs.txt
-
-# Build the docs.
-make clean
-make html
-```
 
 ## Open the docs with your browser
 
