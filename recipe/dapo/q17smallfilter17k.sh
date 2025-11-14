@@ -67,7 +67,7 @@ temperature=1.0
 top_p=1.0
 top_k=-1 # 0 for HF rollout, -1 for vLLM rollout
 val_top_p=0.7
-export WANDB_API_KEY="b9cb4c5167aae55b9cdee22c4627d684ca2256fa"
+export WANDB_API_KEY=""
 # Performance Related Parameter
 sp_size=2
 use_dynamic_bsz=True
