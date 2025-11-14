@@ -1,6 +1,6 @@
 set -x
 #mpirun -np 4 -map-by node 
-export WANDB_API_KEY="b9cb4c5167aae55b9cdee22c4627d684ca2256fa"
+export WANDB_API_KEY="xxxx"
 source ./miniconda3/bin/activate verl_qwentest1
 cd ./verl_internvl_bszsp
 #hmod -R u+w /lib/python3.12/site-packages/triton/backends/nvidia/bin/ptxas
