@@ -74,7 +74,7 @@ if [ "$RANK" -eq 0 ]; then
         ++actor_rollout_ref.actor.loss_mode=${loss_mode}     \
         trainer.default_local_dir=./ckpt/interngspo \
         +model.trust_remote_code=True \
-        data.train_files="['./rldata/train_math_geo3k_2983/train.parquet','./rldata/train_chart_chartqapro_498/train.parquet','./rldata/train_chart_chartx_2353/train.parquet','./rldata/train_chart_tablevqa_496/train.parquet','./rldata/train_chart_virl39k_1657/train.parquet','./rldata/train_counting_clevr-1725/train.parquet','./rldata/train_math_mmmath_3539/train.parquet','./rldata/train_ocr_estvqa_2946/train.parquet','./rldata/train_puzzle_puzzlevqa_2648_x2/train.parquet','./rldata/train_science_scienceqa_536/train.parquet','./rldata/train_science_virl39k_2539/train.parquet','./rldata/train_ocr_llavaov_3092/train.parquet','./rldata/gsm8kim/train.parquet']"  \
+        data.train_files="['./rldata/train_mmk12_cast/train.parquet','./rldata/gsm8kim/train.parquet']"  \
         data.val_files="[./rldata/geo3k/test.parquet]"  \
         data.train_batch_size=${train_prompt_bsz}  \
         data.max_prompt_length=${max_prompt_length}   \
@@ -97,7 +97,7 @@ if [ "$RANK" -eq 0 ]; then
         data.filter_overlong_prompts=True  \
         data.truncation='error'  \
         data.image_key=images \
-        actor_rollout_ref.model.path=OpenGVLab/InternVL2_5-4B \
+        actor_rollout_ref.model.path=OpenGVLab/InternVL2_5-4B-MPO \
         actor_rollout_ref.ref.strategy=fsdp \
         actor_rollout_ref.actor.strategy=fsdp \
         actor_rollout_ref.actor.optim.lr=1e-6  \
