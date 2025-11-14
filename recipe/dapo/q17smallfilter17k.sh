@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 set -x
 
-export NCCL_BLOCKING_WAIT=1  # 强制同步等待，避免异步超时误判
-export NCCL_TIMEOUT=3600000  # 超时时间设为60分钟（单位：ms）
-# 启动训练时设置，生成NCCL通信日志
-export TORCH_NCCL_TRACE_BUFFER_SIZE=1048576  # 1MB缓存，足够记录单步操作
-export NCCL_DEBUG=INFO  # 打印NCCL调试日志
+export NCCL_BLOCKING_WAIT=1  
+export NCCL_TIMEOUT=3600000  
+export TORCH_NCCL_TRACE_BUFFER_SIZE=1048576
+export NCCL_DEBUG=INFO  
 
 
 SHARED_PATH="./exp_tmp/$AIP_RUN_ID"
