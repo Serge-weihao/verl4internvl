@@ -8,8 +8,9 @@ Supporting  image-text and pure text mixed training for InternVL2.5,  it also su
 recipe/dapo/internvlgspo.sh
 
 ## OpenCompass Reasoning Evaluation
+training sets: GSM8k(pure text) + MMK12 (image-text)
 
-| 数据集 | DAPO-GSPO  | BASE Model(Internvl2.5-MPO) |
+| 数据集 | DAPO-GSPO（MMK12+GSM8k)  | BASE Model(Internvl2.5-MPO) |
 | ---- | -------- | -------- |
 | DynaMath | 11.0 | 9.8 |
 | LogicVista | 40.0 | 39.4 |
