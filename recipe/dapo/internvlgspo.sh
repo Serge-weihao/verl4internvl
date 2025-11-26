@@ -34,6 +34,7 @@ enable_filter_groups=True
 filter_groups_metric=acc
 max_num_gen_batches=12
 train_prompt_bsz=128
+mini_batch_size=32
 gen_prompt_bsz=$((train_prompt_bsz * 3))
 if [ "$RANK" -eq 0 ]; then
     mkdir -p "$SHARED_PATH"
@@ -103,7 +104,7 @@ if [ "$RANK" -eq 0 ]; then
         actor_rollout_ref.actor.optim.lr=1e-6  \
         actor_rollout_ref.model.use_remove_padding=True   \
         actor_rollout_ref.actor.ulysses_sequence_parallel_size=2 \
-        actor_rollout_ref.actor.ppo_mini_batch_size=${train_prompt_bsz}     \
+        actor_rollout_ref.actor.ppo_mini_batch_size=${mini_batch_size}     \
         actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=2    \
         actor_rollout_ref.actor.use_kl_loss=True     \
         actor_rollout_ref.actor.kl_loss_coef=0.000     \
